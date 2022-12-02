@@ -22,12 +22,12 @@ const HeaderWrapper = styled(Link)`
 
   /* VW Heights below set fix a flickering issue in Safari by making HeaderWrappers height static. 
   Calculated like this: height = % width of HeaderImage / 3.3 (The ratio of the sides of the logo)*/
-  height: 21.2vw; //10.6
+  height: 30vw; //10.6
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
-    height: 30.3vw; //15.15vw
+    height: 40vw; //15.15vw
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    height: 51.5vw; //25.75vw;
+    height: 52vw; //25.75vw;
   }
 `;
 
