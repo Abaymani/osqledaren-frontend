@@ -7,7 +7,7 @@ import { Link } from 'gatsby';
 const Header: FunctionComponent = () => {
   return (
     <HeaderWrapper to="/">
-      <a href="https://osqledaren.se/advertise/"><AdImage src={ad} />
+      <a href="https://osqledaren.se/advertise/"><AdImage src={ad} /></a>
       <HeaderImage src={logo} />
     </HeaderWrapper>
   );
