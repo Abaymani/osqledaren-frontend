@@ -1,11 +1,13 @@
 import React, { FunctionComponent } from 'react';
-import logo from '../images/Ad-Logo-Test.png'; //Osqledaren_logga_svart.png
+import ad from '../images/Ad-Logo-Test.png'; //Osqledaren_logga_svart.png
+import logo from '../images/Osqledaren_logga_svart.png'; //Osqledaren_logga_svart.png
 import styled from '../styles/styled';
 import { Link } from 'gatsby';
 
 const Header: FunctionComponent = () => {
   return (
     <HeaderWrapper to="/">
+      <HeaderImage src={ad} />
       <HeaderImage src={logo} />
     </HeaderWrapper>
   );
@@ -13,6 +15,7 @@ const Header: FunctionComponent = () => {
 
 const HeaderWrapper = styled(Link)`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1vh 0;
@@ -29,12 +32,12 @@ const HeaderWrapper = styled(Link)`
 `;
 
 const HeaderImage = styled.img`
-  width: 50%; //35
+  width: 35%; //35
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
-    width: 75%; //50
+    width: 50%; //50
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    width: 100%; //85
+    width: 85%; //85
   }
 `;
 
