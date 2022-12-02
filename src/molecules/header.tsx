@@ -32,22 +32,22 @@ const HeaderWrapper = styled(Link)`
 `;
 
 const HeaderImage = styled.img`
-  width: 35%; //35
+  width: 35vw; //35
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
-    width: 50%; //50
+    width: 50vw;//50
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    width: 85%; //85
+    width: 85vw; //85
   }
 `;
 
 const AdImage = styled.img`
-  width: 100%; //35
+  width: 60vw; //35
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
-    width: 100%; //50
+    width: 85vw; //50
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    width: 100%; //85
+    width: 100vw; //85
   }
 `;
 
