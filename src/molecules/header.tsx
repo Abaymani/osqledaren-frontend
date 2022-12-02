@@ -29,12 +29,12 @@ const HeaderWrapper = styled(Link)`
 `;
 
 const HeaderImage = styled.img`
-  width: 35%;
+  width: 50%; //35
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
-    width: 50%;
+    width: 75%; //50
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    width: 85%;
+    width: 100%; //85
   }
 `;
 
