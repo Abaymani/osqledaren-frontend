@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import logo from '../images/Osqledaren_logga_svart.png'; //Osqledaren_logga_svart.png
+import logo from '../images/Ad-Logo-Test.png'; //Osqledaren_logga_svart.png
 import styled from '../styles/styled';
 import { Link } from 'gatsby';
 
@@ -19,12 +19,12 @@ const HeaderWrapper = styled(Link)`
 
   /* VW Heights below set fix a flickering issue in Safari by making HeaderWrappers height static. 
   Calculated like this: height = % width of HeaderImage / 3.3 (The ratio of the sides of the logo)*/
-  height: 10.6vw;
+  height: 21.2vw; //10.6
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
-    height: 15.15vw;
+    height: 30.3vw; //15.15vw
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    height: 25.75vw;
+    height: 51.5vw; //25.75vw;
   }
 `;
 
