@@ -7,8 +7,8 @@ import { Link } from 'gatsby';
 const Header: FunctionComponent = () => {
   return (
     <HeaderWrapper to="/">
-      <HeaderImage src={ad} />
-      <AdImage src={logo} />
+      <AdImage src={ad} />
+      <HeaderImage src={logo} />
     </HeaderWrapper>
   );
 };
