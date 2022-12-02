@@ -32,7 +32,7 @@ const HeaderWrapper = styled(Link)`
 `;
 
 const HeaderImage = styled.img`
-  width: 35vw; //35
+  width: 40vw; //35
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
     width: 50vw;//50
   }
@@ -43,11 +43,12 @@ const HeaderImage = styled.img`
 
 const AdImage = styled.img`
   width: 60vw; //35
+  padding-bottom: 2vh;
   @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
     width: 85vw; //50
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    width: 100vw; //85
+    width: 95vw; //85
   }
 `;
 
