@@ -8,7 +8,7 @@ const Header: FunctionComponent = () => {
   return (
     <HeaderWrapper to="/">
       <HeaderImage src={ad} />
-      <HeaderImage src={logo} />
+      <AdImage src={logo} />
     </HeaderWrapper>
   );
 };
@@ -38,6 +38,16 @@ const HeaderImage = styled.img`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
     width: 85%; //85
+  }
+`;
+
+const AdImage = styled.img`
+  width: 100%; //35
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
+    width: 100%; //50
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+    width: 100%; //85
   }
 `;
 
