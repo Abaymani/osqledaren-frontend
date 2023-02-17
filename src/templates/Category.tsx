@@ -30,6 +30,7 @@ export const query = graphql`
   query CategoryPage($slug: String!) {
     allSanityArticle(
       filter: { category: { slug: { current: { eq: $slug } } } }
+      sort: { fields: publishDate, order: DESC }
     ) {
       edges {
         node {

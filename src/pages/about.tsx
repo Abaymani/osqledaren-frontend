@@ -7,6 +7,35 @@ import Img from 'gatsby-image';
 import Layout from '../organisms/Layout';
 import InfoWrapper from '../molecules/InfoWrapper';
 
+import Agnes from '../images/polaroids/Agnes.png';
+import Alcina from '../images/polaroids/Alcina2.png';
+import Alexandra from '../images/polaroids/Alexandra4.png';
+import Anastasia from '../images/polaroids/Anastasia.png';
+import Anirudh from '../images/polaroids/Anirudh.png';
+import Anna from '../images/polaroids/Anna.png';
+import Ayan from '../images/polaroids/Ayan.png';
+import Benjamin from '../images/polaroids/Benjamin.png';
+import Celeste from '../images/polaroids/Celeste.png';
+import Chen from '../images/polaroids/Chen.png';
+import Diana from '../images/polaroids/Diana 2.png';
+import Irakli from '../images/polaroids/Irakli.png';
+import Lina from '../images/polaroids/Lina.png';
+import Ludvig from '../images/polaroids/Ludvig.png';
+import Luna from '../images/polaroids/Luna.png';
+import Maite from '../images/polaroids/Maite.png';
+import Markus from '../images/polaroids/Markus.png';
+import Meline from '../images/polaroids/Meline.png';
+import My from '../images/polaroids/My.png';
+import Nour from '../images/polaroids/Nour 2.png';
+import Office from '../images/polaroids/Office.png';
+import Oscar from '../images/polaroids/Oscar.png';
+import Parisa from '../images/polaroids/Parisa.png';
+import Roisin from '../images/polaroids/Roisin.png';
+import Sandra from '../images/polaroids/Sandra 2.png';
+import Sara from '../images/polaroids/Sara.png';
+import Su from '../images/polaroids/Su.png';
+import Veronika from '../images/polaroids/Veronika.png';
+
 const About: FunctionComponent = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -64,12 +93,53 @@ const About: FunctionComponent = () => {
           {/* <ImageWrapper>
             <Img fluid={data.staff.childImageSharp.fluid} />
           </ImageWrapper> */}
+          <MembersWrapper>
+            <img src={Agnes}></img>
+            <img src={Alcina}></img>
+            <img src={Alexandra}></img>
+            <img src={Anastasia}></img>
+            <img src={Anirudh}></img>
+            <img src={Anna}></img>
+            <img src={Ayan}></img>
+            <img src={Benjamin}></img>
+            <img src={Celeste}></img>
+            <img src={Chen}></img>
+            <img src={Diana}></img>
+            <img src={Irakli}></img>
+            <img src={Lina}></img>
+            <img src={Ludvig}></img>
+            <img src={Luna}></img>
+            <img src={Maite}></img>
+            <img src={Markus}></img>
+            <img src={Meline}></img>
+            <img src={My}></img>
+            <img src={Nour}></img>
+            <img src={Office}></img>
+            <img src={Oscar}></img>
+            <img src={Parisa}></img>
+            <img src={Roisin}></img>
+            <img src={Sandra}></img>
+            <img src={Sara}></img>
+            <img src={Su}></img>
+            <img src={Veronika}></img>
+          </MembersWrapper>
         </AboutContainer>
       </InfoWrapper>
     </Layout>
   );
 };
 export default About;
+
+const MembersWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  > img {
+    width: 100px;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+`;
 
 const Contact = styled.div`
   margin-top: 20px;
