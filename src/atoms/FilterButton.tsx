@@ -24,52 +24,50 @@ const FilterButton: FunctionComponent<Props> = ({ name, background, to }) => (
 );
 
 const FilterButt = styled.div<FilterButtProps>`
-  background: ${props => {
-    return props.background;
-  }};
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 35vw;
   width: 72vw;
   cursor: pointer;
-  color: ${props => {
-    return props.background == props.theme.colors.underhallning
-      ? 'black'
-      : 'white';
-  }};
+  color: black;
   line-height: 12px;
   font-family: Avenir, Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   text-transform: uppercase;
   padding: 5px;
-  font-size: 0.8vw;
+  font-size: 1.2vw;
   height: 2vw;
-  word-break: break-all;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
   text-align: center;
-  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
-  :hover {
-    -moz-transition: height 0.35s;
-    -ms-transition: height 0.35s;
-    -o-transition: height 0.35s;
-    -webkit-transition: height 0.35s;
-    transition: height 0.35s;
-    height: 2.5vw;
-    overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom: 0.6vw solid;
+    border-bottom-color: ${props => {
+      return props.background;
+    }};
+    transition: border-bottom-width 0.35s ease;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
-    font-size: 1vw;
+
+  &:hover:after {
+    border-bottom-width: 1vw;
   }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    height: 7vw;
-    font-size: 0.5em;
-    :hover {
-      height: 7vw;
-    }
+    display: none;
   }
 `;
 

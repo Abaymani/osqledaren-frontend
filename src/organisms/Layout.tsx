@@ -7,7 +7,6 @@ import theme from '../styles/theme';
 
 const Layout: FunctionComponent = ({ children }) => (
   <LayoutWrapper>
-    <Header />
     <Filterbar />
     <Content>{children}</Content>
     <Footer />
