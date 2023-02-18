@@ -34,6 +34,6 @@ export const ReadMoreButton = typedStyled.button`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
     font-size: 3vw;
-    height: 7vw;
+    height: 9vw;
   }
 `;

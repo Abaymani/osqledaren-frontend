@@ -108,8 +108,17 @@ const Filterbar: FunctionComponent = () => {
           <a tabIndex={0} href="https://issuu.com/osqledaren">
             <img src={issuu}></img> Issuu
           </a>
+          <a tabIndex={0} href="/podcasts">
+            Podcasts
+          </a>
+          <a tabIndex={0} href="/tips">
+            Insändare
+          </a>
+          <a tabIndex={0} href="/advertise">
+            Annonsera
+          </a>
           <a tabIndex={0} href="/about">
-            About
+            Om oss
           </a>
         </HamburgerMenu>
       </Hamburger>
@@ -146,7 +155,6 @@ const BarDesktop = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    margin-bottom: 2rem;
     height: 10vh;
     justify-content: space-between;
     padding-left: 4vw;
@@ -201,14 +209,14 @@ const HamburgerMenu = styled.div`
   letter-spacing: 1px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px;
+  padding: 5px 5px 0px 5px;
   font-size: 1.3vw;
   
   text-align: right;
   box-sizing: border-box;
 
-  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
-
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  
 
   > a {
     text-decoration: none;
@@ -216,6 +224,7 @@ const HamburgerMenu = styled.div`
       color: black;
     }
     border-bottom: 0.01vw solid lightgrey;
+    :last-child { border-bottom: none; }
     border-left: 3vw solid transparent;
     width: 100%;
     box-sizing: border-box;
@@ -225,7 +234,6 @@ const HamburgerMenu = styled.div`
       justify-content: flex-end;
       align-items: center;
       flex-direction: row;
-
       > img {
         height: 2vw;
         margin-right: 1vw;
@@ -245,12 +253,12 @@ const HamburgerMenu = styled.div`
       border-bottom: none;
     }
     > a {
-      font-size: 4vh;
+      font-size: 3vh;
       justify-content: center;
       flex:1;
       > img {
-        height: 5vh;
-        margin-right: 3vh;
+        height: 4vh;
+        margin-right: 2vh;
       }
     }
     align-items: center;
