@@ -37,7 +37,7 @@ const FilterButt = styled.div<FilterButtProps>`
   font-weight: bold;
   text-transform: uppercase;
   padding: 5px;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   height: 2vw;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;

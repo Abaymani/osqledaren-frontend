@@ -1,5 +1,8 @@
 import React, { FunctionComponent, useState } from 'react';
 import logo from '../images/logo-small.png'; //Osqledaren_logga_svart.png
+import instagram from '../images/instagram.png';
+import facebook from '../images/facebook.png';
+import issuu from '../images/issuu.png';
 import FilterButton from '../atoms/FilterButton';
 import styled from '../styles/styled';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -97,13 +100,13 @@ const Filterbar: FunctionComponent = () => {
             På Campus
           </a>
           <a tabIndex={0} href="https://www.instagram.com/osqledaren/">
-            Instagram
+            <img src={instagram}></img> <div>Instagram</div>
           </a>
           <a tabIndex={0} href="https://www.facebook.com/osqledaren">
-            Facebook
+            <img src={facebook}></img> Facebook
           </a>
           <a tabIndex={0} href="https://issuu.com/osqledaren">
-            Issuu
+            <img src={issuu}></img> Issuu
           </a>
           <a tabIndex={0} href="/about">
             About
@@ -117,7 +120,7 @@ const HeaderImage = styled.img`
   width: 4vw; //35
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-    width: 12vw;
+    width: 7vh;
   }
 `;
 
@@ -136,8 +139,7 @@ const BarDesktop = styled.div`
   top: 0;
   z-index: 10;
   background-color: #f4f4f4;
-  box-shadow: 0px 2.5px 4px rgba(0, 0, 0, 0.02),
-    0px 20px 32px rgba(0, 0, 0, 0.04);
+  box-shadow: -6px 0 white, 6px 0 white, 0 0px 20px grey;
 
   > a {
     margin-right: 20px;
@@ -145,9 +147,9 @@ const BarDesktop = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
     margin-bottom: 2rem;
-    height: 15vw;
+    height: 10vh;
     justify-content: space-between;
-    padding-left: 2vw;
+    padding-left: 4vw;
     padding-right: 2vw;
   }
 `;
@@ -176,23 +178,23 @@ const Hamburger = styled.div`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
-      height:5vw;
-      width: 5vw;
+      height:3vh;
+      width: 3vh;
     }
 }
 `;
 
 const HamburgerMenu = styled.div`
-display:flex;  
-flex-direction: column;
+  display: flex;  
+  flex-direction: column;
   align-items: right;
   justify-content: right;
   position: fixed;
   top: 5vw;
-  right: 12vw;
+  right: 11vw;
   background-color: #f4f4f4;
   color: black;
-  width: 15vw;
+
   cursor: pointer;
   
   font-family: Avenir, Arial, Helvetica, sans-serif;
@@ -200,24 +202,35 @@ flex-direction: column;
   font-weight: bold;
   text-transform: uppercase;
   padding: 10px;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   
   text-align: right;
   box-sizing: border-box;
 
   box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+
+
   > a {
     text-decoration: none;
     &:link, &:visited {
       color: black;
     }
+    border-bottom: 0.01vw solid lightgrey;
     border-left: 3vw solid transparent;
     width: 100%;
     box-sizing: border-box;
-    height: 5vw;
+    height: 4vw;
+    padding-right: 0.7vw;
     display:flex;
       justify-content: flex-end;
       align-items: center;
+      flex-direction: row;
+
+      > img {
+        height: 2vw;
+        margin-right: 1vw;
+        filter: invert(1);
+      }
     
   }
 
@@ -229,20 +242,27 @@ flex-direction: column;
     theme.breakpoints.sm + 'px'}) {
     > a.smol {
       display: flex;
+      border-bottom: none;
     }
     > a {
-      height: 10vw;
-      font-size: 3vw;
+      font-size: 4vh;
       justify-content: center;
+      flex:1;
+      > img {
+        height: 5vh;
+        margin-right: 3vh;
+      }
     }
     align-items: center;
-
+    height: 90vh;
     width: 100%;
-    top: 15vw;
+    top: 10vh;
     right: 0vw;
     padding: 0px;
     text-align:center;
   }
+
+
 }
 `;
 
