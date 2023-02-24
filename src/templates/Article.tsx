@@ -1,15 +1,15 @@
-import React, { FC } from 'react';
-import Layout from '../organisms/Layout';
-import { graphql } from 'gatsby';
-import { Article } from '../utils/types';
-import Img from 'gatsby-image';
-import H from '../atoms/H';
-import P from '../atoms/P';
-import InfoWrapper from '../molecules/InfoWrapper';
-import BlockContent from '@sanity/block-content-to-react';
-import styled from '../styles/styled';
-import TwitterLogo from '../images/Twitter_Logo_Blue.svg';
-import smallOL from '../images/logo-small.png';
+import React, { FC } from "react";
+import Layout from "../organisms/Layout";
+import { graphql } from "gatsby";
+import { Article } from "../utils/types";
+import Img from "gatsby-image";
+import H from "../atoms/H";
+import P from "../atoms/P";
+import InfoWrapper from "../molecules/InfoWrapper";
+import BlockContent from "@sanity/block-content-to-react";
+import styled from "../styles/styled";
+import TwitterLogo from "../images/Twitter_Logo_Blue.svg";
+import smallOL from "../images/logo-small.png";
 
 interface Props {
   data: {
@@ -37,10 +37,10 @@ const ArticleTemplate: FC<Props> = ({ data }) => {
                 )}
                 <CreatorInfo size="16pt">
                   <span>
-                    {contribution.creator.name + ' - ' + contribution.role.name}
+                    {contribution.creator.name + " - " + contribution.role.name}
                   </span>
                   {contribution.creator.mail ? (
-                    <a href={'mailto: ' + contribution.creator.mail}>
+                    <a href={"mailto: " + contribution.creator.mail}>
                       {contribution.creator.mail}
                     </a>
                   ) : (
@@ -62,18 +62,6 @@ const ArticleTemplate: FC<Props> = ({ data }) => {
           ></Content>
           <BottomRow>
             <P size="16">Publicerad: {data.sanityArticle.publishDate}</P>
-            <Twitter
-              href={
-                'https://twitter.com/share?url=https://osqledaren.se/' +
-                data.sanityArticle.category.slug.current +
-                '/' +
-                data.sanityArticle.slug.current
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={TwitterLogo} alt="Twitter logo" />
-            </Twitter>
           </BottomRow>
         </ArticleWrapper>
       </InfoWrapper>
@@ -89,7 +77,7 @@ const ArticleWrapper = styled.div`
   padding: 2% 10%;
   background-color: white;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.16), 0 4px 5px rgba(0, 0, 0, 0.22);
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     padding: 0 5%;
   }
 `;
@@ -101,7 +89,7 @@ const CreatorsWrapper = styled.div`
   margin-bottom: 40px;
   margin-left: -10px;
   width: 100%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     margin-bottom: 0px;
   }
 `;
@@ -113,7 +101,7 @@ const Creator = styled.div`
   flex-grow: 1;
   margin: 0 0 10px 10px;
   align-items: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     min-width: 100%;
   }
 `;
