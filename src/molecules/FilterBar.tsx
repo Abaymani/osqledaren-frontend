@@ -1,13 +1,13 @@
-import React, { FunctionComponent, useState } from 'react';
-import logo from '../images/logo-small.png'; //Osqledaren_logga_svart.png
-import instagram from '../images/instagram.png';
-import facebook from '../images/facebook.png';
-import issuu from '../images/issuu.png';
-import FilterButton from '../atoms/FilterButton';
-import styled from '../styles/styled';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Category } from '../utils/types';
-import theme from '../styles/theme';
+import React, { FunctionComponent, useState } from "react";
+import logo from "../images/logo-small.png"; //Osqledaren_logga_svart.png
+import instagram from "../images/instagram.png";
+import facebook from "../images/facebook.png";
+import issuu from "../images/issuu.png";
+import FilterButton from "../atoms/FilterButton";
+import styled from "../styles/styled";
+import { useStaticQuery, graphql } from "gatsby";
+import { Category } from "../utils/types";
+import theme from "../styles/theme";
 
 const Filterbar: FunctionComponent = () => {
   const [isActive, setIsActive] = useState(false);
@@ -45,7 +45,7 @@ const Filterbar: FunctionComponent = () => {
 
       <Hamburger
         tabIndex={0}
-        className={isActive ? 'open' : ''}
+        className={isActive ? "open" : ""}
         onBlur={e => {
           if (
             (e.nativeEvent.target as any).contains(e.nativeEvent.relatedTarget)
@@ -60,7 +60,7 @@ const Filterbar: FunctionComponent = () => {
       >
         <HamburgerMenu>
           <a
-            className={'smol'}
+            className={"smol"}
             style={{ borderColor: theme.colors.branch }}
             tabIndex={0}
             href="/samhalle"
@@ -68,7 +68,7 @@ const Filterbar: FunctionComponent = () => {
             Samhälle
           </a>
           <a
-            className={'smol'}
+            className={"smol"}
             style={{ borderColor: theme.colors.english }}
             tabIndex={0}
             href="/kultur"
@@ -76,7 +76,7 @@ const Filterbar: FunctionComponent = () => {
             Kultur
           </a>
           <a
-            className={'smol'}
+            className={"smol"}
             style={{ borderColor: theme.colors.olGraver }}
             tabIndex={0}
             href="/ol-graever"
@@ -84,7 +84,7 @@ const Filterbar: FunctionComponent = () => {
             OL Gräver
           </a>
           <a
-            className={'smol'}
+            className={"smol"}
             style={{ borderColor: theme.colors.underhallning }}
             tabIndex={0}
             href="/underhallning"
@@ -92,7 +92,7 @@ const Filterbar: FunctionComponent = () => {
             Underhållning
           </a>
           <a
-            className={'smol'}
+            className={"smol"}
             style={{ borderColor: theme.colors.aktuellt }}
             tabIndex={0}
             href="/pa-campus"
@@ -120,6 +120,9 @@ const Filterbar: FunctionComponent = () => {
           <a tabIndex={0} href="/about">
             Om oss
           </a>
+          <a tabIndex={0} href="/livereporting">
+            OL Live
+          </a>
         </HamburgerMenu>
       </Hamburger>
     </BarDesktop>
@@ -128,7 +131,7 @@ const Filterbar: FunctionComponent = () => {
 const HeaderImage = styled.img`
   width: 4vw; //35
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     width: 7vh;
   }
 `;
@@ -154,7 +157,7 @@ const BarDesktop = styled.div`
     margin-right: 20px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     height: 10vh;
     justify-content: space-between;
     padding-left: 4vw;
@@ -185,7 +188,7 @@ const Hamburger = styled.div`
  
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
       height:3vh;
       width: 3vh;
     }
@@ -247,7 +250,7 @@ const HamburgerMenu = styled.div`
   }
 
   @media only screen and (max-width:  ${({ theme }) =>
-    theme.breakpoints.sm + 'px'}) {
+    theme.breakpoints.sm + "px"}) {
     > a.smol {
       display: flex;
       border-bottom: none;
