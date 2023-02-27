@@ -13,7 +13,26 @@ const Live: FunctionComponent = () => {
         <LiveContainer>
           <LiveText>
             <H variant="3">Live reporting from Kårfullmäktige KF-04</H>
+            <li>
+              Follow our live reporting below. You can find all documents for
+              KF-04
+              <a href="https://drive.google.com/drive/folders/1CSdqR8gKbDTGtGcLkS2iOpQQ12Mw6cyD">
+                here.
+              </a>
+            </li>
+            <br />
           </LiveText>
+          <iframe
+            name="lb24"
+            frameborder="0"
+            height="100%"
+            loading="lazy"
+            width="100%"
+            class="lb24-iframe"
+            scrolling="auto"
+            src="//v.24liveblog.com/iframe/?id=3260367258858776128"
+          ></iframe>
+          <script src="https://v.24liveblog.com/iframe.js"></script>
         </LiveContainer>
       </InfoWrapper>
     </Layout>
