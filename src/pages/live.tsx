@@ -13,14 +13,16 @@ const Live: FunctionComponent = () => {
         <LiveContainer>
           <LiveText>
             <H variant="3">Live reporting from Kårfullmäktige KF-04</H>
-            <li>
-              Follow our live reporting below. You can find all documents for
-              KF-04
-              <a href="https://drive.google.com/drive/folders/1CSdqR8gKbDTGtGcLkS2iOpQQ12Mw6cyD">
-                here.
-              </a>
-            </li>
-            <br />
+            <P>
+              <li>
+                Follow our live reporting below. You can find all documents for
+                KF-04
+                <a href="https://drive.google.com/drive/folders/1CSdqR8gKbDTGtGcLkS2iOpQQ12Mw6cyD">
+                  here.
+                </a>
+              </li>
+              <br />
+            </P>
           </LiveText>
           <iframe
             name="lb24"
@@ -47,8 +49,7 @@ const LiveText = styled.div`
 
 const LiveContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
   background-color: white;
   padding: 0 5%;
