@@ -34,7 +34,7 @@ const LayoutWrapper = styled.div`
 `;
 
 const Lilwrapper = styled.div`
-  width: 60vw;
+  width: 65vw;
   height: 50vh;
   padding: 5vh;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
