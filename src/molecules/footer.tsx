@@ -1,13 +1,13 @@
-import React, { FunctionComponent } from 'react';
-import { Link as InternalLink } from 'gatsby';
-import styled from '../styles/styled';
-import P from '../atoms/P';
-import ExternalLink from '../atoms/Link';
-import OlLogo from '../images/OL-logga-vit.png';
+import React, { FunctionComponent } from "react";
+import { Link as InternalLink } from "gatsby";
+import styled from "../styles/styled";
+import P from "../atoms/P";
+import ExternalLink from "../atoms/Link";
+import OlLogo from "../images/OL-logga-vit.png";
 //import twitter from '../images/twitter-white.png';
-import facebook from '../images/facebook.png';
-import instagram from '../images/instagram.png';
-import github from '../images/github.png';
+import facebook from "../images/facebook.png";
+import instagram from "../images/instagram.png";
+import github from "../images/github.png";
 
 const Footer: FunctionComponent = () => {
   return (
@@ -39,7 +39,7 @@ const Footer: FunctionComponent = () => {
           </ExternalLink>
         </Links>
         <P size="16pt" color="white">
-          Ansvarig utgivare: Benjamin Javitz <br />© 2008 -{' '}
+          Ansvarig utgivare: Benjamin Javitz <br />© 2008 -{" "}
           {new Date().getFullYear()} Osqledaren.
         </P>
       </InfoWrapper>
@@ -52,7 +52,8 @@ const FooterWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 92vw;
+  width: 100%;
+  box-sizing: border-box;
   padding-left: 4vw;
   padding-right: 4vw;
   margin-top: 5vh;
@@ -75,7 +76,7 @@ const SocialMedia = styled.div`
   align-items: center;
   justify-content: space-evenly;
   width: 30vw;
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     width: 60vw;
   }
 `;
