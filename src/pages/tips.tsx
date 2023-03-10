@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from 'react';
-import { Link } from 'gatsby';
-import Layout from '../organisms/Layout';
-import InfoWrapper from '../molecules/InfoWrapper';
-import styled from '../styles/styled';
-import H from '../atoms/H';
-import P from '../atoms/P';
+import React, { FunctionComponent } from "react";
+import { Link } from "gatsby";
+import Layout from "../organisms/Layout";
+import InfoWrapper from "../molecules/InfoWrapper";
+import styled from "../styles/styled";
+import H from "../atoms/H";
+import P from "../atoms/P";
 
 const Subscribe: FunctionComponent = () => {
   return (
@@ -21,7 +21,7 @@ const Subscribe: FunctionComponent = () => {
             <H variant="4">Insändare</H>
             <P>
               Vill du istället skriva en insändare till tidningen? Följ
-              instruktionerna{' '}
+              instruktionerna{" "}
               <a
                 href="https://docs.google.com/document/d/1bIo8LqcSZzrZMCEG1R0_nQvBQuTCY5o9LpmodeoE8PI/"
                 target="_blank"
@@ -55,7 +55,7 @@ const TipsContainer = styled.div`
   margin: 20px 0;
   justify-content: space-between;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 350 + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 350 + "px"}) {
     flex-direction: column;
   }
 `;

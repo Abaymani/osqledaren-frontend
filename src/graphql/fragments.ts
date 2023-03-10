@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 
 export const articleFragment = graphql`
   fragment Article on SanityArticle {
@@ -52,6 +52,20 @@ export const categoryFragment = graphql`
     }
     menu
     order
+  }
+`;
+
+export const creatorFragment = graphql`
+  fragment Creator on SanityCreator {
+    name
+    mail
+    profilePicture {
+      asset {
+        fluid(maxWidth: 1000) {
+          ...GatsbySanityImageFluid
+        }
+      }
+    }
   }
 `;
 

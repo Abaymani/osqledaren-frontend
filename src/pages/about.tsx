@@ -1,53 +1,27 @@
-import React, { FunctionComponent } from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import styled from '../styles/styled';
-import H from '../atoms/H';
-import P from '../atoms/P';
-import Img from 'gatsby-image';
-import Layout from '../organisms/Layout';
-import InfoWrapper from '../molecules/InfoWrapper';
-
-import Agnes from '../images/polaroids/Agnes.png';
-import Alcina from '../images/polaroids/Alcina2.png';
-import Alexandra from '../images/polaroids/Alexandra4.png';
-import Anastasia from '../images/polaroids/Anastasia.png';
-import Anirudh from '../images/polaroids/Anirudh.png';
-import Anna from '../images/polaroids/Anna.png';
-import Ayan from '../images/polaroids/Ayan.png';
-import Benjamin from '../images/polaroids/Benjamin.png';
-import Celeste from '../images/polaroids/Celeste.png';
-import Chen from '../images/polaroids/Chen.png';
-import Diana from '../images/polaroids/Diana 2.png';
-import Irakli from '../images/polaroids/Irakli.png';
-import Lina from '../images/polaroids/Lina.png';
-import Ludvig from '../images/polaroids/Ludvig.png';
-import Luna from '../images/polaroids/Luna.png';
-import Maite from '../images/polaroids/Maite.png';
-import Markus from '../images/polaroids/Markus.png';
-import Meline from '../images/polaroids/Meline.png';
-import My from '../images/polaroids/My.png';
-import Nour from '../images/polaroids/Nour 2.png';
-import Office from '../images/polaroids/Office.png';
-import Oscar from '../images/polaroids/Oscar.png';
-import Parisa from '../images/polaroids/Parisa.png';
-import Roisin from '../images/polaroids/Roisin.png';
-import Sandra from '../images/polaroids/Sandra 2.png';
-import Sara from '../images/polaroids/Sara.png';
-import Su from '../images/polaroids/Su.png';
-import Veronika from '../images/polaroids/Veronika.png';
-
+import React, { FunctionComponent } from "react";
+import { graphql, useStaticQuery, Link } from "gatsby";
+import styled from "../styles/styled";
+import H from "../atoms/H";
+import P from "../atoms/P";
+import Img from "gatsby-image";
+import Layout from "../organisms/Layout";
+import InfoWrapper from "../molecules/InfoWrapper";
 const About: FunctionComponent = () => {
   const data = useStaticQuery(graphql`
-    query {
-      staff: file(relativePath: { eq: "staff.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+    query Creators {
+      allSanityCreator(filter: { currentMember: { eq: true } }) {
+        edges {
+          node {
+            ...Creator
           }
         }
       }
     }
   `);
+
+  const creators = data.allSanityCreator.edges.map(e => e.node);
+
+  console.log(creators[0]);
   return (
     <Layout>
       <InfoWrapper>
@@ -63,7 +37,7 @@ const About: FunctionComponent = () => {
               utbildning.
             </P>
             <P>
-              Vill ni annonsera i Osqledaren?{' '}
+              Vill ni annonsera i Osqledaren?{" "}
               <Link to="/advertise">Klicka här!</Link>
             </P>
           </AboutText>
@@ -94,34 +68,14 @@ const About: FunctionComponent = () => {
             <Img fluid={data.staff.childImageSharp.fluid} />
           </ImageWrapper> */}
           <MembersWrapper>
-            <img src={Agnes}></img>
-            <img src={Alcina}></img>
-            <img src={Alexandra}></img>
-            <img src={Anastasia}></img>
-            <img src={Anirudh}></img>
-            <img src={Anna}></img>
-            <img src={Ayan}></img>
-            <img src={Benjamin}></img>
-            <img src={Celeste}></img>
-            <img src={Chen}></img>
-            <img src={Diana}></img>
-            <img src={Irakli}></img>
-            <img src={Lina}></img>
-            <img src={Ludvig}></img>
-            <img src={Luna}></img>
-            <img src={Maite}></img>
-            <img src={Markus}></img>
-            <img src={Meline}></img>
-            <img src={My}></img>
-            <img src={Nour}></img>
-            <img src={Office}></img>
-            <img src={Oscar}></img>
-            <img src={Parisa}></img>
-            <img src={Roisin}></img>
-            <img src={Sandra}></img>
-            <img src={Sara}></img>
-            <img src={Su}></img>
-            <img src={Veronika}></img>
+            {creators
+              .filter(creator => creator.profilePicture?.asset)
+              .map(c => (
+                <a href={"mailto:" + c.mail}>
+                  <Creator fluid={c.profilePicture.asset.fluid}></Creator>
+                  {/*<span>{c.name}</span> */}
+                </a>
+              ))}
           </MembersWrapper>
         </AboutContainer>
       </InfoWrapper>
@@ -141,9 +95,15 @@ const MembersWrapper = styled.div`
   }
 `;
 
+const Creator = styled(Img)`
+  width: 100px;
+  margin-top: 20px;
+  margin-right: 10px;
+`;
+
 const Contact = styled.div`
   margin-top: 20px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 1000 + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 1000 + "px"}) {
     order: 3;
   }
 `;
@@ -172,7 +132,7 @@ const AboutContainer = styled.div`
   margin: 20px 0;
   justify-content: space-between;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 350 + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 350 + "px"}) {
     flex-direction: column;
   }
 `;
