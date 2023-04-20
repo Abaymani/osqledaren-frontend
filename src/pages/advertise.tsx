@@ -40,10 +40,8 @@ const Advertise: FunctionComponent = () => (
             <P>
               Vill ni annonsera i Osqledaren? <br></br>
               <b>
-                Maila vår annonsbyrå:{' '}<br></br>
-                FörbundsMedia AB<br></br>
-                Ricard Sjöberg<br></br>
-                <a href="mailto:ricard.sjoberg@fbmedia.se">ricard.sjoberg@fbmedia.se</a>{' '}
+                Skriva till oss på:{' '}<br></br>
+                <a href="mailto:osqledaren@ths.kth.se">osqledaren@ths.kth.se</a>{' '}
               </b>
             </P>
           </Contact>
@@ -55,8 +53,8 @@ const Advertise: FunctionComponent = () => (
             <li>Tryckteknik: Fyrafärgs CMYK.</li>
             <li>Upplösning: 300 dpi</li>
             <li>Utfall: 3mm</li>
-            <li>Inlaga: 120g TF Obestruket Offset</li>
-            <li>Omslag: 240g TF Obestruket Offset</li>
+            <li>Inlaga: 100g TF Obestruket Offset</li>
+            <li>Omslag: 250g TF Obestruket Offset</li>
           </P>
 
           <Sections>
@@ -66,7 +64,7 @@ const Advertise: FunctionComponent = () => (
                 <img src={Backside}></img>
                 <P size="18">
                   Mått: 208 x 230 mm <br />
-                  <b>32 000 kr</b>
+                  <b>25 000 kr</b>
                 </P>
               </SectionContent>
             </Section>
@@ -76,7 +74,7 @@ const Advertise: FunctionComponent = () => (
                 <img src={HalfPage}></img>
                 <P size="18">
                   Liggande: 208 x 135 mm <br /> Stående: 104 x 270 mm <br />
-                  <b>15 000 kr</b>
+                  <b>10 000 kr</b>
                 </P>
               </SectionContent>
             </Section>
@@ -87,9 +85,9 @@ const Advertise: FunctionComponent = () => (
                 <P size="18">
                   Mått: 208 x 270 mm <br />
                   <b>
-                    Inlaga - 24 000 kr
+                    Inlaga - 18 000 kr
                     <br />
-                    Första uppslaget - 26 000 kr
+                    Första uppslaget - 20 000 kr
                   </b>
                 </P>
               </SectionContent>
@@ -100,7 +98,7 @@ const Advertise: FunctionComponent = () => (
                 <img src={QuarterPage}></img>
                 <P size="18">
                   Stående: 104 x 135 mm <br />
-                  <b>10 000 kr</b>
+                  <b>6 000 kr</b>
                 </P>
               </SectionContent>
             </Section>
