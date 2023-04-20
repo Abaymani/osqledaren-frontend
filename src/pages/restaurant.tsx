@@ -4,7 +4,10 @@ import Layout from "../organisms/Layout";
 import P from "../atoms/P";
 
 const Restaurant: FunctionComponent = () => {
-  window.location.href = "https://forms.gle/CVCg9crR5JAa6fNg7";
+  if (typeof window !== `undefined`) {
+    window.location.href = "https://forms.gle/CVCg9crR5JAa6fNg7";
+  }
+
   return (
     <Layout>
       <RedirectMessageWrapper>
