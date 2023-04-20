@@ -1,11 +1,15 @@
-const path = require('path');
-const { getArticleSlug } = require('./src/utils/slug');
+const path = require("path");
+const { getArticleSlug } = require("./src/utils/slug");
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage, createRedirect } = actions;
 
   // TODO: Remove me after survey.
-  createRedirect({fromPath: "/restaurant", toPath: "https://forms.gle/CVCg9crR5JAa6fNg7"});
+  createRedirect({
+    fromPath: "/restaurant",
+    toPath: "https://forms.gle/CVCg9crR5JAa6fNg7",
+    force: true,
+  });
 
   const articleQuery = await graphql(`
     {
@@ -56,7 +60,7 @@ exports.createPages = async ({ actions, graphql }) => {
   categoryQuery.data.allSanityCategory.edges.forEach(({ node }) => {
     createPage({
       path: node.slug.current,
-      component: path.resolve('./src/templates/Category.tsx'),
+      component: path.resolve("./src/templates/Category.tsx"),
       context: {
         slug: node.slug.current,
       },
@@ -66,7 +70,7 @@ exports.createPages = async ({ actions, graphql }) => {
   articleQuery.data.allSanityArticle.edges.forEach(({ node }) => {
     createPage({
       path: getArticleSlug(node.category.slug.current, node.slug.current),
-      component: path.resolve('src/templates/Article.tsx'),
+      component: path.resolve("src/templates/Article.tsx"),
       context: {
         slug: node.slug.current,
       },
