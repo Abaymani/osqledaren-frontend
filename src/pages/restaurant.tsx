@@ -1,0 +1,28 @@
+import React, { FunctionComponent } from "react";
+import styled from "../styles/styled";
+import Layout from "../organisms/Layout";
+import P from "../atoms/P";
+
+const Restaurant: FunctionComponent = () => {
+  return (
+    <Layout>
+      <RedirectMessageWrapper>
+        <P>Redirecting...</P>
+      </RedirectMessageWrapper>
+    </Layout>
+  );
+};
+export default Restaurant;
+
+const RedirectMessageWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 5%;
+  margin: 20px 0;
+  justify-content: space-between;
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 350 + "px"}) {
+    flex-direction: column;
+  }
+`;
