@@ -4,6 +4,7 @@ import Layout from "../organisms/Layout";
 import P from "../atoms/P";
 
 const Restaurant: FunctionComponent = () => {
+  window.location.href = "https://forms.gle/CVCg9crR5JAa6fNg7";
   return (
     <Layout>
       <RedirectMessageWrapper>
@@ -12,6 +13,7 @@ const Restaurant: FunctionComponent = () => {
     </Layout>
   );
 };
+
 export default Restaurant;
 
 const RedirectMessageWrapper = styled.div`

@@ -2,15 +2,7 @@ const path = require("path");
 const { getArticleSlug } = require("./src/utils/slug");
 
 exports.createPages = async ({ actions, graphql }) => {
-  const { createPage, createRedirect } = actions;
-
-  // TODO: Remove me after survey.
-  createRedirect({
-    fromPath: "/restaurant",
-    toPath: "https://forms.gle/CVCg9crR5JAa6fNg7",
-    force: true,
-    redirectInBrowser: true,
-  });
+  const { createPage } = actions;
 
   const articleQuery = await graphql(`
     {
