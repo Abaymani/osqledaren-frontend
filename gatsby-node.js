@@ -9,6 +9,7 @@ exports.createPages = async ({ actions, graphql }) => {
     fromPath: "/restaurant",
     toPath: "https://forms.gle/CVCg9crR5JAa6fNg7",
     force: true,
+    redirectInBrowser: true,
   });
 
   const articleQuery = await graphql(`
