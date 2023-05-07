@@ -35,6 +35,11 @@ const Links: FunctionComponent = () => {
                 color: link.textColor.hex,
               }}
             >
+              {link.image ? (
+                <LinkImage src={link.image?.asset.fluid.src}></LinkImage>
+              ) : (
+                ""
+              )}
               {link.name}
             </Link>
           ))}
@@ -55,6 +60,7 @@ const Layout = styled.div`
   height: 100vh;
   max-height: 100vh;
   font-family: Avenir, sans-serif;
+  overscroll-behavior: none;
 `;
 
 const Header = styled.div`
@@ -63,7 +69,7 @@ const Header = styled.div`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 128px;
+  height: 116px;
 `;
 
 const LinkListContainer = styled.div`
@@ -84,7 +90,16 @@ const LinkList = styled.div`
   width: calc(100% - 40px);
 `;
 
+const LinkImage = styled.img`
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  height: 30px;
+  width: 30px;
+`;
+
 const Link = styled.a`
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -93,7 +108,7 @@ const Link = styled.a`
   background: rgb(220, 112, 45);
   color: inherit;
   text-decoration: inherit;
-  height: 59px;
+  height: 50px;
   font-weight: bold;
   border-radius: 50px;
 
