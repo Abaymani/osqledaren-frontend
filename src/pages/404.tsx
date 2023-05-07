@@ -1,11 +1,15 @@
-import React, { FC } from 'react';
-import Layout from '../organisms/Layout';
-import H from '../atoms/H';
-import styled from '../styles/styled';
-import ContentWrapper from '../molecules/ContentWrapper';
+import React, { FC } from "react";
+import Layout from "../organisms/Layout";
+import H from "../atoms/H";
+import styled from "../styles/styled";
+import ContentWrapper from "../molecules/ContentWrapper";
+import Helmet from "react-helmet";
 
 const PageNotFound: FC = () => (
   <Layout>
+    <Helmet>
+      <title>404 - Osqledaren</title>
+    </Helmet>
     <ContentWrapper>
       <NotFoundWrapper>
         <H variant="3">Hm... Sidan du letar efter verkar inte finnas.</H>

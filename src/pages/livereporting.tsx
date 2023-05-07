@@ -5,10 +5,14 @@ import InfoWrapper from "../molecules/InfoWrapper";
 import styled from "../styles/styled";
 import H from "../atoms/H";
 import P from "../atoms/P";
+import Helmet from "react-helmet";
 
 const Live: FunctionComponent = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Live - Osqledaren</title>
+      </Helmet>
       <InfoWrapper>
         <LiveContainer>
           <LiveText>

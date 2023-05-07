@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "../styles/styled";
 import logo from "../images/logo-small.png";
-import { graphql, useStaticQuery } from "gatsby"; //Osqledaren_logga_svart.png
+import { graphql, useStaticQuery } from "gatsby";
+import Helmet from "react-helmet";
 const Links: FunctionComponent = () => {
   const data = useStaticQuery(graphql`
     query Links {
@@ -21,6 +22,9 @@ const Links: FunctionComponent = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Links - Osqledaren</title>
+      </Helmet>
       <Header>
         <Logo src={logo}></Logo>
       </Header>
@@ -127,7 +131,7 @@ const Footer = styled.div`
   flex-direction: row;
   align-items: center;
   flex-shrink: 0;
-  height: 128px;
+  height: 116px;
   background-color: black;
   box-sizing: border-box;
 `;

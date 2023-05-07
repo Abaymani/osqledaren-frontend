@@ -1,16 +1,20 @@
-import React, { FunctionComponent } from 'react';
-import Layout from '../organisms/Layout';
-import H from '../atoms/H';
-import P from '../atoms/P';
-import styled from '../styles/styled';
-import InfoWrapper from '../molecules/InfoWrapper';
-import Backside from '../images/baksida.png';
-import HalfPage from '../images/halvsida.png';
-import WholePage from '../images/helsida.png';
-import QuarterPage from '../images/kvart.png';
+import React, { FunctionComponent } from "react";
+import Layout from "../organisms/Layout";
+import H from "../atoms/H";
+import P from "../atoms/P";
+import styled from "../styles/styled";
+import InfoWrapper from "../molecules/InfoWrapper";
+import Backside from "../images/baksida.png";
+import HalfPage from "../images/halvsida.png";
+import WholePage from "../images/helsida.png";
+import QuarterPage from "../images/kvart.png";
+import Helmet from "react-helmet";
 
 const Advertise: FunctionComponent = () => (
   <Layout>
+    <Helmet>
+      <title>Advertise - Osqledaren</title>
+    </Helmet>
     <InfoWrapper>
       <AdvertiseContainer>
         <Infotext>
@@ -32,7 +36,7 @@ const Advertise: FunctionComponent = () => (
               såväl som produktionen. Osqledaren är ett utmärkt
               annonseringsalternativ för er som vill nå KTH-studenter eftersom
               vi kommunicerar med framtidens KTHingenjörer på ett naturligt och
-              välbekant sätt, regelbundet och i stor volym.{' '}
+              välbekant sätt, regelbundet och i stor volym.{" "}
             </P>
           </About>
           <Contact>
@@ -40,8 +44,10 @@ const Advertise: FunctionComponent = () => (
             <P>
               Vill ni annonsera i Osqledaren? <br></br>
               <b>
-                Skriva till oss på:{' '}<br></br>
-                <a href="mailto:osqledaren@ths.kth.se">osqledaren@ths.kth.se</a>{' '}
+                Skriva till oss på: <br></br>
+                <a href="mailto:osqledaren@ths.kth.se">
+                  osqledaren@ths.kth.se
+                </a>{" "}
               </b>
             </P>
           </Contact>
@@ -147,7 +153,7 @@ const AdvertiseContainer = styled.div`
   background-color: white;
   padding: 5%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl + "px"}) {
     flex-direction: column;
     > div {
       width: 100%;
@@ -160,7 +166,7 @@ const Infotext = styled.div`
   flex-direction: row;
   justify-content: space-between;
   border-bottom: solid lightgray 1px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.xl + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl + "px"}) {
     flex-direction: column;
     > div {
       width: 100%;
@@ -198,14 +204,14 @@ const Physical = styled.div`
 
 const Sections = styled(Dates)`
   display: flex;
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     flex-direction: column;
   }
 `;
 const Section = styled.div`
   width: 50%;
   margin-top: 20px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     width: 100%;
     margin-right: 5px;
   }
@@ -219,7 +225,7 @@ const SectionContent = styled.div`
     height: 100%;
     margin-right: 30px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     flex-direction: row;
     width: 100%;
     > img {

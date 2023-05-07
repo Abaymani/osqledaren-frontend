@@ -5,10 +5,14 @@ import InfoWrapper from "../molecules/InfoWrapper";
 import styled from "../styles/styled";
 import H from "../atoms/H";
 import P from "../atoms/P";
+import Helmet from "react-helmet";
 
 const Subscribe: FunctionComponent = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Tipsa oss - Osqledaren</title>
+      </Helmet>
       <InfoWrapper>
         <TipsContainer>
           <TipsText>

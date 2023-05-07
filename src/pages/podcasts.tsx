@@ -1,13 +1,14 @@
-import React, { FC } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Episode } from '../utils/types';
-import Layout from '../organisms/Layout';
-import { Article } from '../utils/types';
-import InfoWrapper from '../molecules/InfoWrapper';
+import React, { FC } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Episode } from "../utils/types";
+import Layout from "../organisms/Layout";
+import { Article } from "../utils/types";
+import InfoWrapper from "../molecules/InfoWrapper";
 
-import H from '../atoms/H';
-import P from '../atoms/P';
-import styled from '../styles/styled';
+import H from "../atoms/H";
+import P from "../atoms/P";
+import styled from "../styles/styled";
+import Helmet from "react-helmet";
 
 interface Props {
   pageContext: {
@@ -43,22 +44,25 @@ interface Props {
 // `);
 
 const episodeIds = [
-  '7wOAce2SReVmZr4vnTawyd',
-  '5Zvd2LGCh4m3yGUbgutZv9',
-  '7zdCVyLC1gLmPnz9uqu7HQ',
-  '2CqmKNEIX6GOO3lO0VbmAO',
-  '431KSt20plP1z014CKHic8',
+  "7wOAce2SReVmZr4vnTawyd",
+  "5Zvd2LGCh4m3yGUbgutZv9",
+  "7zdCVyLC1gLmPnz9uqu7HQ",
+  "2CqmKNEIX6GOO3lO0VbmAO",
+  "431KSt20plP1z014CKHic8",
 ];
 
 const Podcasts: FC<Props> = () => (
   <Layout>
+    <Helmet>
+      <title>Podcasts - Osqledaren</title>
+    </Helmet>
     <InfoWrapper>
       <PodcastContainer>
         <PodcastText>
           <H variant="3">Podcasts</H>
           <P>Here you can listen to Osqledaren's podcasts:</P>
         </PodcastText>
-        {episodeIds.map(episodeId => (
+        {episodeIds.map((episodeId) => (
           <PodcastItem key={episodeId}>
             <iframe
               src={`https://open.spotify.com/embed-podcast/episode/${episodeId}`}
@@ -85,7 +89,7 @@ const PodcastContainer = styled.div`
   padding: 2% 10%;
   background-color: white;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.16), 0 4px 5px rgba(0, 0, 0, 0.22);
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     padding: 0 5%;
   }
 `;
