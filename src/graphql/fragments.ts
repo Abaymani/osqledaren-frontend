@@ -69,6 +69,26 @@ export const creatorFragment = graphql`
   }
 `;
 
+export const linkFragment = graphql`
+  fragment Link on SanityLink {
+    name
+    url
+    color {
+      hex
+    }
+    textColor {
+      hex
+    }
+    order
+    image {
+      asset {
+        fluid(maxWidth: 1000) {
+          ...GatsbySanityImageFluid
+        }
+      }
+    }
+  }
+`;
 // export const episodeFragment = graphql`
 //   fragment Episode on PodcastEpisode {
 //     title
