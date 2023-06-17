@@ -89,6 +89,29 @@ export const linkFragment = graphql`
     }
   }
 `;
+
+export const magazineFragment = graphql`
+  fragment Magazine on SanityMagazine {
+    publishDate
+    title
+    year
+    link
+    currentYear
+    file {
+      asset {
+        url
+        size
+      }
+    }
+    thumbnail {
+      asset {
+        fluid(maxWidth: 1000) {
+          ...GatsbySanityImageFluid
+        }
+      }
+    }
+  }
+`;
 // export const episodeFragment = graphql`
 //   fragment Episode on PodcastEpisode {
 //     title

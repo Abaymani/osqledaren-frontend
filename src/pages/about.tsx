@@ -20,9 +20,8 @@ const About: FunctionComponent = () => {
     }
   `);
 
-  const creators = data.allSanityCreator.edges.map((e) => e.node);
+  const creators = data.allSanityCreator.edges.map(e => e.node);
 
-  console.log(creators[0]);
   return (
     <Layout>
       <Helmet>
@@ -73,8 +72,8 @@ const About: FunctionComponent = () => {
           </ImageWrapper> */}
           <MembersWrapper>
             {creators
-              .filter((creator) => creator.profilePicture?.asset)
-              .map((c) => (
+              .filter(creator => creator.profilePicture?.asset)
+              .map(c => (
                 <a href={"mailto:" + c.mail}>
                   <Creator fluid={c.profilePicture.asset.fluid}></Creator>
                   {/*<span>{c.name}</span> */}
