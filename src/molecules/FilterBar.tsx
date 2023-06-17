@@ -114,14 +114,11 @@ const Filterbar: FunctionComponent = () => {
           <a tabIndex={0} href="/tips">
             Insändare
           </a>
-          <a tabIndex={0} href="/advertise">
+          <a tabIndex={0} href="/partner">
             Annonsera
           </a>
           <a tabIndex={0} href="/about">
             Om oss
-          </a>
-          <a tabIndex={0} href="/livereporting">
-            OL Live
           </a>
         </HamburgerMenu>
       </Hamburger>
