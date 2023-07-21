@@ -1,8 +1,11 @@
 import React, { FunctionComponent } from "react";
 import styled from "../styles/styled";
-import logo from "../images/logo-small.png";
+import logo from "../images/logo-black.png";
 import { graphql, useStaticQuery } from "gatsby";
 import Helmet from "react-helmet";
+import P from "../atoms/P";
+import ExternalLink from "../atoms/Link";
+
 const Links: FunctionComponent = () => {
   const data = useStaticQuery(graphql`
     query Links {
@@ -17,7 +20,7 @@ const Links: FunctionComponent = () => {
   `);
 
   const links = data.allSanityLink.edges
-    .map((e) => e.node)
+    .map(e => e.node)
     .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 
   return (
@@ -36,7 +39,7 @@ const Links: FunctionComponent = () => {
               key={"link-" + i}
               style={{
                 backgroundColor: link.color.hex,
-                color: link.textColor.hex,
+                color: link.textColor.hex
               }}
             >
               {link.image ? (
@@ -49,7 +52,11 @@ const Links: FunctionComponent = () => {
           ))}
         </LinkList>
       </LinkListContainer>
-      <Footer></Footer>
+      <Footer>
+        <P size="5pt" color="white">
+          © 2008 - {new Date().getFullYear()} Osqledaren.
+        </P>
+      </Footer>
     </Layout>
   );
 };
@@ -65,6 +72,7 @@ const Layout = styled.div`
   max-height: 100vh;
   font-family: Avenir, sans-serif;
   overscroll-behavior: none;
+  font-size: 2.5vh;
 `;
 
 const Header = styled.div`
@@ -73,7 +81,8 @@ const Header = styled.div`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 116px;
+  height: 12vh;
+  box-shadow: -6px 0 white, 6px 0 white, 0 0px 20px grey;
 `;
 
 const LinkListContainer = styled.div`
@@ -86,20 +95,19 @@ const LinkListContainer = styled.div`
 `;
 
 const LinkList = styled.div`
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  max-width: 680px;
-  width: calc(100% - 40px);
+  max-width: 500px;
+  width: 80%;
 `;
 
 const LinkImage = styled.img`
   position: absolute;
-  top: 10px;
-  left: 25px;
-  height: 30px;
-  width: 30px;
+  top: 15px;
+  left: 15px;
+  height: 40px;
 `;
 
 const Link = styled.a`
@@ -112,26 +120,32 @@ const Link = styled.a`
   background: rgb(220, 112, 45);
   color: inherit;
   text-decoration: inherit;
-  height: 50px;
+  height: 70px;
   font-weight: bold;
-  border-radius: 50px;
+  border-radius: 10px;
 
   &:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+  }
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
   }
 `;
 
 const Logo = styled.img`
-  width: 96px;
-  height: 96px;
+  height: 10vh;
 `;
 
 const Footer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   flex-shrink: 0;
-  height: 116px;
+  height: 50px;
   background-color: black;
   box-sizing: border-box;
+  font-size: 2vh;
 `;
