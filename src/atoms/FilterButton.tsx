@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from 'react';
-import styled from '../styles/styled';
-import { navigate } from 'gatsby';
+import React, { FunctionComponent } from "react";
+import styled from "../styles/styled";
+import { navigate } from "gatsby";
 
 interface Props {
   name: string;
@@ -48,25 +48,25 @@ const FilterButt = styled.div<FilterButtProps>`
   position: relative;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border-bottom: 0.6vw solid;
+    border-bottom: 0.5vw solid;
     border-bottom-color: ${props => {
       return props.background;
     }};
-    transition: border-bottom-width 0.35s ease;
+    transition: border-bottom-width 0.2s ease;
   }
 
   &:hover:after {
-    border-bottom-width: 1vw;
+    border-bottom-width: 0.8vw;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + 'px'}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
     display: none;
   }
 `;

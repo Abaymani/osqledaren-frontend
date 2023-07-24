@@ -120,6 +120,9 @@ const Filterbar: FunctionComponent = () => {
           <a tabIndex={0} href="/about">
             Om oss
           </a>
+          <a tabIndex={0} href="/archive">
+            Arkiv
+          </a>
         </HamburgerMenu>
       </Hamburger>
     </BarDesktop>
@@ -209,7 +212,7 @@ const HamburgerMenu = styled.div`
   letter-spacing: 1px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 5px 5px 0px 5px;
+  padding: 5px 0px 0px 5px;
   font-size: 1.3vw;
   
   text-align: right;
@@ -217,33 +220,39 @@ const HamburgerMenu = styled.div`
 
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
   
+  
 
   > a {
     text-decoration: none;
     &:link, &:visited {
       color: black;
     }
+    &:hover{
+      border-right: 0.5vw solid lightgrey;
+   
+    }
     border-bottom: 0.01vw solid lightgrey;
     :last-child { border-bottom: none; }
     border-left: 3vw solid transparent;
+    border-right: 0.5vw solid transparent;
     width: 100%;
     box-sizing: border-box;
     height: 4vw;
-    padding-right: 0.7vw;
+    padding-right: 0.9vw;
     display:flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
       > img {
         height: 2vw;
         margin-right: 1vw;
         filter: invert(1);
       }
-    
   }
 
   > a.smol {
     display: none;
+    border-right: none;
   }
 
   @media only screen and (max-width:  ${({ theme }) =>

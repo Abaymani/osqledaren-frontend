@@ -88,6 +88,7 @@ const YearWrapper = styled.div`
 
   > span {
     font-weight: bold;
+    font-size: 20px;
   }
 
   &:last-of-type {
@@ -97,17 +98,26 @@ const YearWrapper = styled.div`
 
 const MagazinesWrapper = styled.div`
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fill, 125px);
 
+  grid-template-columns: repeat(5, 20%);
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg + "px"}) {
+    grid-template-columns: repeat(4, 25%);
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.md + "px"}) {
+    grid-template-columns: repeat(3, 33%);
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
+    grid-template-columns: repeat(2, 50%);
+  }
   > a {
-    width: 100px;
+    width: 95%;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: black;
-    font-size: 12px;
-    overflow: hidden;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 15px;
     > span {
       margin-top: 5px;
       white-space: nowrap;
@@ -122,9 +132,13 @@ const MagazinesWrapper = styled.div`
 `;
 
 const Magazine = styled(Img)`
-  width: 100px;
-  margin-top: 20px;
-  margin-right: 10px;
+  width: 100%;
+  transition: box-shadow 0.1s, transform 0.1s;
+  &:hover {
+    box-shadow: 0 0.25rem 0.75rem 0 #bbbbbb;
+    transform: translateY(-4px);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
 `;
 
 const AboutText = styled.div`
