@@ -143,12 +143,12 @@ const Magazine = styled(Img)`
 
 const AboutText = styled.div`
   margin-top: 20px;
-  max-width: 800px;
+  width: 100%;
 `;
 
 const AboutContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-family: Avenir;
   width: 100%;
   background-color: white;

@@ -27,17 +27,17 @@ const FilterButt = styled.div<FilterButtProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 35vw;
+  max-width: 200px;
   width: 72vw;
   cursor: pointer;
   color: black;
-  line-height: 12px;
+
   font-family: Avenir, Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 5px;
-  font-size: 1.3vw;
+  padding: 5px 5px 10px 5px;
+  font-size: 17px;
   height: 2vw;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -55,7 +55,7 @@ const FilterButt = styled.div<FilterButtProps>`
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border-bottom: 0.5vw solid;
+    border-bottom: 5px solid;
     border-bottom-color: ${props => {
       return props.background;
     }};
@@ -63,10 +63,14 @@ const FilterButt = styled.div<FilterButtProps>`
   }
 
   &:hover:after {
-    border-bottom-width: 0.8vw;
+    border-bottom-width: 8px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg + "px"}) {
+    font-size: 14px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md + "px"}) {
     display: none;
   }
 `;

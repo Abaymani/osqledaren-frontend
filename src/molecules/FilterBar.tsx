@@ -129,9 +129,9 @@ const Filterbar: FunctionComponent = () => {
   );
 };
 const HeaderImage = styled.img`
-  width: 4vw; //35
+  width: 40px; //35
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md + "px"}) {
     width: 7vh;
   }
 `;
@@ -142,11 +142,11 @@ const BarDesktop = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 1%;
+  padding-top: 10px;
   padding-left: 10vw;
   padding-right: 10vw;
   box-sizing: border-box;
-  height: 5vw;
+  height: 60px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -157,7 +157,7 @@ const BarDesktop = styled.div`
     margin-right: 20px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md + "px"}) {
     height: 10vh;
     justify-content: space-between;
     padding-left: 4vw;
@@ -166,8 +166,8 @@ const BarDesktop = styled.div`
 `;
 
 const Hamburger = styled.div`
-    width: 2vw;
-    height: 2vw;
+    width: 30px;
+    height: 30px;
     display: block;
     border: none;
     position: relative;
@@ -176,11 +176,12 @@ const Hamburger = styled.div`
     cursor: pointer;
     background: linear-gradient(
       to bottom, 
-      black, black 20%, 
-      white 20%, white 40%, 
-      black 40%, black 60%, 
-      white 60%, white 80%, 
-      black 80%, black 100%
+      black, black 15%, 
+      white 15%, white 40%, 
+      black 40%, black 55%, 
+      white 55%, white 80%, 
+      black 80%, black 95%,
+      white 95%, white 100%
     );
 
     &:not(.open) div  {
@@ -188,7 +189,7 @@ const Hamburger = styled.div`
  
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.sm + "px"}) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.md + "px"}) {
       height:3vh;
       width: 3vh;
     }
@@ -200,9 +201,9 @@ const HamburgerMenu = styled.div`
   flex-direction: column;
   align-items: right;
   justify-content: right;
-  position: fixed;
-  top: 5vw;
-  right: 11vw;
+  position: absolute;
+  top: 40px;
+  right: 0px;
   background-color: #f4f4f4;
   color: black;
 
@@ -213,13 +214,18 @@ const HamburgerMenu = styled.div`
   font-weight: bold;
   text-transform: uppercase;
   padding: 5px 0px 0px 5px;
-  font-size: 1.3vw;
+  font-size: 17px;
+  line-height: 50px;
+  width: 200px;
   
   text-align: right;
   box-sizing: border-box;
 
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-  
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg + "px"}) {
+    font-size: 14px;
+    line-height: 40px;
+  }
   
 
   > a {
@@ -228,25 +234,28 @@ const HamburgerMenu = styled.div`
       color: black;
     }
     &:hover{
-      border-right: 0.5vw solid lightgrey;
+      border-right: 8px solid lightgrey;
    
     }
-    border-bottom: 0.01vw solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     :last-child { border-bottom: none; }
-    border-left: 3vw solid transparent;
-    border-right: 0.5vw solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 8px solid transparent;
     width: 100%;
     box-sizing: border-box;
-    height: 4vw;
-    padding-right: 0.9vw;
+    padding-right: 10px;
     display:flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
       > img {
-        height: 2vw;
-        margin-right: 1vw;
+        height: 30px;
+        margin-right: 15px;
         filter: invert(1);
+        @media (max-width: ${({ theme }) => theme.breakpoints.lg + "px"}) {
+          height: 20px;
+          margin-right: 10px;
+        }
       }
   }
 
@@ -256,7 +265,7 @@ const HamburgerMenu = styled.div`
   }
 
   @media only screen and (max-width:  ${({ theme }) =>
-    theme.breakpoints.sm + "px"}) {
+    theme.breakpoints.md + "px"}) {
     > a.smol {
       display: flex;
       border-bottom: none;
@@ -270,6 +279,7 @@ const HamburgerMenu = styled.div`
         margin-right: 2vh;
       }
     }
+    position: fixed;
     align-items: center;
     height: 90vh;
     width: 100%;
