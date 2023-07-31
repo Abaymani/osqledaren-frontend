@@ -69,7 +69,7 @@ const Advertise: FunctionComponent = () => (
               <SectionContent>
                 <img src={Backside}></img>
                 <P size="18">
-                  Mått: 208 x 230 mm <br />
+                  Mått: 180 x 200 mm <br />
                   <b>25 000 kr</b>
                 </P>
               </SectionContent>
@@ -107,7 +107,7 @@ const Advertise: FunctionComponent = () => (
           </Sections>
         </Physical>
         <Plan>
-          <H variant="3">Utgivningsplan 2022/2023</H>
+          <H variant="3">Utgivningsplan 2023/2024</H>
           <Dates>
             <Date>
               <H variant="4">Utgåva 1</H>
