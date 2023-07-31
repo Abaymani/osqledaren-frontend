@@ -90,11 +90,7 @@ const Advertise: FunctionComponent = () => (
                 <img src={WholePage}></img>
                 <P size="18">
                   Mått: 208 x 270 mm <br />
-                  <b>
-                    Inlaga - 18 000 kr
-                    <br />
-                    Första uppslaget - 20 000 kr
-                  </b>
+                  <b>18 000 kr</b>
                 </P>
               </SectionContent>
             </Section>
@@ -116,25 +112,25 @@ const Advertise: FunctionComponent = () => (
             <Date>
               <H variant="4">Utgåva 1</H>
               <P size="17" lh="22">
-                Säljstopp 07/10-22 {<br />} Utgivning 07/11-22
+                Säljstopp 07/10/23 {<br />} Utgivning 06/11/23
               </P>
             </Date>
             <Date>
               <H variant="4">Utgåva 2</H>
               <P size="17" lh="22">
-                Säljstopp 07/12-22 {<br />} Utgivning 11/01-23
+                Säljstopp 07/12/23 {<br />} Utgivning 08/01/24
               </P>
             </Date>
             <Date>
               <H variant="4">Utgåva 3</H>
               <P size="17" lh="22">
-                Säljstopp 23/02-23 {<br />} Utgivning 23/03-23
+                Säljstopp 23/02/24 {<br />} Utgivning 22/03/24
               </P>
             </Date>
             <Date>
               <H variant="4">Utgåva 4</H>
               <P size="17" lh="22">
-                Säljstopp 04/05-23 {<br />} Utgivning 01/06-23
+                Säljstopp 26/04/24 {<br />} Utgivning 24/05/24
               </P>
             </Date>
           </Dates>
