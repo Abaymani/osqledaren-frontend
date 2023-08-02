@@ -80,7 +80,7 @@ const Layout = styled.div`
   max-height: 100vh;
   font-family: Avenir, sans-serif;
   overscroll-behavior: none;
-  font-size: 2vh;
+  font-size: calc(15px + 0.7vh);
 `;
 
 const Header = styled.div`
@@ -116,8 +116,6 @@ const StructureLink = styled.a`
 `;
 
 const LinkList = styled.div`
-  padding-top: 0px;
-  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   max-width: 500px;
@@ -145,10 +143,10 @@ const Link = styled.a`
   font-weight: bold;
   border-radius: 10px;
   text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 5%;
+  padding-right: 5%;
 
-  &:not(:last-child) {
+  :last-child {
     margin-bottom: 10px;
   }
   &:hover {
