@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "../styles/styled";
 import logo from "../images/logo-black.png";
-import OLstructure from "../images/OLStructure.svg";
+import OLstructure1 from "../images/OLStructure1.svg";
+import OLstructure2 from "../images/OLStructure2.svg";
 import Helmet from "react-helmet";
 import P from "../atoms/P";
 import ExternalLink from "../atoms/Link";
@@ -18,33 +19,43 @@ const Apply: FunctionComponent = () => {
       </Header>
 
       <LinkListContainer>
-        <OLStructure src={OLstructure}></OLStructure>
+        <StructureLink
+          href="https://forms.gle/kr1G7sN2JPRAZsqMA"
+          target="_blank"
+        >
+          <OLStructure src={OLstructure1}></OLStructure>
+        </StructureLink>
+
         <LinkList>
           <Link
             href="https://forms.gle/kr1G7sN2JPRAZsqMA"
             target="_blank"
             rel="noreferrer"
             style={{
-              backgroundColor: "#cccccc",
+              backgroundColor: "#f5c832",
               color: "black"
             }}
           >
-            {"Apply for Osqledingen"}
-
-            <LinkImage></LinkImage>
+            Apply for Osqledingen (Project&nbsp;Group)
           </Link>
-
+        </LinkList>
+        <StructureLink
+          href="https://forms.gle/GD3wncsaTAcwsN5u8"
+          target="_blank"
+        >
+          <OLStructure src={OLstructure2}></OLStructure>
+        </StructureLink>
+        <LinkList>
           <Link
             href="https://forms.gle/GD3wncsaTAcwsN5u8"
             target="_blank"
             rel="noreferrer"
             style={{
-              backgroundColor: "#cccccc",
+              backgroundColor: "#f5c832",
               color: "black"
             }}
           >
-            {"Apply for the Redaqtion"}
-            <LinkImage></LinkImage>
+            Apply for the Redaqtion (other&nbsp;positions)
           </Link>
         </LinkList>
       </LinkListContainer>
@@ -69,7 +80,7 @@ const Layout = styled.div`
   max-height: 100vh;
   font-family: Avenir, sans-serif;
   overscroll-behavior: none;
-  font-size: 2.5vh;
+  font-size: 2vh;
 `;
 
 const Header = styled.div`
@@ -92,6 +103,10 @@ const LinkListContainer = styled.div`
 `;
 
 const OLStructure = styled.img`
+  width: 100%;
+`;
+
+const StructureLink = styled.a`
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
@@ -101,8 +116,8 @@ const OLStructure = styled.img`
 `;
 
 const LinkList = styled.div`
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   max-width: 500px;
@@ -129,6 +144,9 @@ const Link = styled.a`
   height: 70px;
   font-weight: bold;
   border-radius: 10px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
 
   &:not(:last-child) {
     margin-bottom: 10px;
