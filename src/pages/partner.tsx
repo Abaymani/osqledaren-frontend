@@ -112,7 +112,7 @@ const Advertise: FunctionComponent = () => (
             <Date>
               <H variant="4">Utgåva 1</H>
               <P size="17" lh="22">
-                Säljstopp 07/10/23 {<br />} Utgivning 06/11/23
+                Säljstopp 10/10/23 {<br />} Utgivning 06/11/23
               </P>
             </Date>
             <Date>
