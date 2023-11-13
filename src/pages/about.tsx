@@ -49,10 +49,10 @@ const About: FunctionComponent = () => {
             <H variant="3">Kontaktuppgifter</H>
             <ContactList>
               <P>
-                <li>Chefredaktör: Benjamin Javitz</li>
+                <li>Chefredaktör: Raquel Frescia</li>
                 <br />
                 <li>Ansvarig utgivare:</li>
-                <li>Benjamin Javitz</li>
+                <li>Raquel Frescia</li>
                 <li>
                   <a href="tel:087909888">08 79 09 888</a>
                 </li>
